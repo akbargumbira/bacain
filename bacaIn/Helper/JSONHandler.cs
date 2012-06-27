@@ -20,6 +20,9 @@ namespace bacaIn.Helper
             return JsonConvert.DeserializeObject<Channel>(JSON);
         }
 
-        public 
+        public String Serialize(Channel Object)
+        {
+            return JsonConvert.SerializeObject(Object);
+        }
     }
 }
