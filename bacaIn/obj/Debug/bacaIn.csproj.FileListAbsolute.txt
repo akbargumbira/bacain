@@ -1,0 +1,13 @@
+D:\Informatics\hackontent\bacaIn\bacaIn\Bin\Debug\ApplicationIcon.png
+D:\Informatics\hackontent\bacaIn\bacaIn\Bin\Debug\Background.png
+D:\Informatics\hackontent\bacaIn\bacaIn\Bin\Debug\bacaIn.dll
+D:\Informatics\hackontent\bacaIn\bacaIn\Bin\Debug\bacaIn.pdb
+D:\Informatics\hackontent\bacaIn\bacaIn\Bin\Debug\AppManifest.xaml
+D:\Informatics\hackontent\bacaIn\bacaIn\Bin\Debug\bacaIn.xap
+D:\Informatics\hackontent\bacaIn\bacaIn\obj\Debug\ResolveAssemblyReference.cache
+D:\Informatics\hackontent\bacaIn\bacaIn\obj\Debug\App.g.i.cs
+D:\Informatics\hackontent\bacaIn\bacaIn\obj\Debug\MainPage.g.i.cs
+D:\Informatics\hackontent\bacaIn\bacaIn\obj\Debug\bacaIn.g.resources
+D:\Informatics\hackontent\bacaIn\bacaIn\obj\Debug\bacaIn.dll
+D:\Informatics\hackontent\bacaIn\bacaIn\obj\Debug\bacaIn.pdb
+D:\Informatics\hackontent\bacaIn\bacaIn\obj\Debug\XapCacheFile.xml
