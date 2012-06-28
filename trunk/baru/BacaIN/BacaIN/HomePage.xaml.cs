@@ -24,6 +24,7 @@ namespace BacaIN
         
         private void buttonSmart_Click(object sender, RoutedEventArgs e)
         {
+            ArticleViewModel.offset = 0;
             MainPage.idChannel = 1;
             System.Diagnostics.Debug.WriteLine("Button Smart CLicked");
             NavigationService.Navigate(new Uri("/MainPage.xaml", UriKind.Relative));
@@ -31,6 +32,7 @@ namespace BacaIN
 
         private void buttonInspiration_Click(object sender, RoutedEventArgs e)
         {
+            ArticleViewModel.offset = 0;
             System.Diagnostics.Debug.WriteLine("Button Inspiration CLicked");
             MainPage.idChannel = 4;
             NavigationService.Navigate(new Uri("/MainPage.xaml", UriKind.Relative));
@@ -38,6 +40,7 @@ namespace BacaIN
 
         private void buttonCommunity_Click(object sender, RoutedEventArgs e)
         {
+            ArticleViewModel.offset = 0;
             System.Diagnostics.Debug.WriteLine("Button Community CLicked");
             MainPage.idChannel = 5;
             NavigationService.Navigate(new Uri("/MainPage.xaml", UriKind.Relative));
@@ -45,6 +48,7 @@ namespace BacaIN
 
         private void buttonLeisure_Click(object sender, RoutedEventArgs e)
         {
+            ArticleViewModel.offset = 0;
             System.Diagnostics.Debug.WriteLine("Button Leisure CLicked");
             MainPage.idChannel = 3;
             NavigationService.Navigate(new Uri("/MainPage.xaml", UriKind.Relative));
@@ -52,6 +56,7 @@ namespace BacaIN
 
         private void buttonMindBodySoul_Click(object sender, RoutedEventArgs e)
         {
+            ArticleViewModel.offset = 0;
             System.Diagnostics.Debug.WriteLine("Button Mind Body Soul CLicked");
             MainPage.idChannel = 2;
             NavigationService.Navigate(new Uri("/MainPage.xaml", UriKind.Relative));

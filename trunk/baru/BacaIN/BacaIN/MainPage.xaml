@@ -10,12 +10,22 @@
     xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
     xmlns:ec="clr-namespace:Microsoft.Expression.Interactivity.Core;assembly=Microsoft.Expression.Interactions"
     mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="768" 
+    xmlns:u="clr-namespace:BacaIN.WindowsPhone7Unleashed" 
+    xmlns:ValueConverters="clr-namespace:BacaIN.WindowsPhone7Unleashed.ValueConverters"
     d:DataContext="{d:DesignData SampleData/ArticleViewModelSampleData.xaml}"
     FontFamily="{StaticResource PhoneFontFamilyNormal}"
     FontSize="{StaticResource PhoneFontSizeNormal}"
     Foreground="{StaticResource PhoneForegroundBrush}"
     SupportedOrientations="Portrait"  Orientation="Portrait"
     shell:SystemTray.IsVisible="True">
+
+    <phone:PhoneApplicationPage.Resources>
+        <ValueConverters:BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" />
+        <Style x:Key="LoadingStyle" 
+               TargetType="TextBlock" BasedOn="{StaticResource PhoneTextAccentStyle}">
+            <Setter Property="FontSize" Value="16" />
+        </Style>
+    </phone:PhoneApplicationPage.Resources>
 
     <!--Data context is set to sample data above and LayoutRoot contains the root grid where all other page content is placed-->
     <Grid x:Name="LayoutRoot" Background="Transparent">
@@ -32,11 +42,11 @@
 
         <!--ContentPanel contains ListBox and ListBox ItemTemplate. Place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
-            <ListBox x:Name="MainListBox" Margin="0,0,-12,0" ItemsSource="{Binding articleSources}" SelectionChanged="MainListBox_SelectionChanged"> <!--SelectedIndex="{Binding ListSelectedIndex, Mode=TwoWay}">-->
+            <ListBox x:Name="MainListBox" Margin="0,0,-12,0" ItemsSource="{Binding articleSources}" SelectionChanged="MainListBox_SelectionChanged"
+                     u:ScrollViewerMonitor.AtEndCommand="{Binding FetchMoreDataCommand}">
                 <ListBox.ItemTemplate>
                     <DataTemplate>
                       <StackPanel Margin="0,0,0,17" Width="432" Height="100">
-                            <!--<UserControls:Loader Width="100" Height="100"/> -->
                             <Image Source="{Binding Image}" Stretch="None" MaxWidth="200" MaxHeight="20" />
                             <TextBlock Text="{Binding Title}" TextWrapping="Wrap" Style="{StaticResource PhoneTextExtraLargeStyle}"/>
                             <TextBlock Text="{Binding Description}" TextWrapping="Wrap" Margin="12,-6,12,0" Style="{StaticResource PhoneTextSubtleStyle}"/>  
@@ -44,6 +54,19 @@
                     </DataTemplate>
                 </ListBox.ItemTemplate>
             </ListBox>
+            <Grid Grid.Row="1"
+                  Visibility="{Binding Busy, 
+                        Converter={StaticResource BooleanToVisibilityConverter}}">
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <TextBlock Text="Loading..." 
+                           Style="{StaticResource LoadingStyle}" HorizontalAlignment="Center" VerticalAlignment="Bottom" />
+                <ProgressBar IsIndeterminate="{Binding Busy}"
+                             VerticalAlignment="Bottom"
+                             Grid.Row="1" />
+            </Grid>
         </Grid>
     </Grid>
  
