@@ -71,7 +71,6 @@
     </Compile>
     <Compile Include="Helper\Connection.cs" />
     <Compile Include="Helper\IOHandler.cs" />
-    <Compile Include="Helper\RSSTextTrimmer.cs" />
     <Compile Include="HomePage.xaml.cs">
       <DependentUpon>HomePage.xaml</DependentUpon>
     </Compile>
@@ -83,6 +82,7 @@
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Models\Article.cs" />
+    <Compile Include="Helper\RSSTextTrimmer.cs" />
     <Compile Include="SampleData\Image.cs" />
     <Compile Include="Models\ModelBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -142,9 +142,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="NewFolder1\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight for Phone\$(TargetFrameworkVersion)\Microsoft.Silverlight.$(TargetFrameworkProfile).Overrides.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight for Phone\$(TargetFrameworkVersion)\Microsoft.Silverlight.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

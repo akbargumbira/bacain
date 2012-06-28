@@ -61,11 +61,10 @@
                     <RowDefinition />
                     <RowDefinition />
                 </Grid.RowDefinitions>
-                <TextBlock Text="Loading..." 
-                           Style="{StaticResource LoadingStyle}" HorizontalAlignment="Center" VerticalAlignment="Bottom" />
+                
                 <ProgressBar IsIndeterminate="{Binding Busy}"
                              VerticalAlignment="Bottom"
-                             Grid.Row="1" />
+                             Grid.Row="1" Foreground="Blue" FontSize="20" HorizontalAlignment="Stretch" />
             </Grid>
         </Grid>
     </Grid>
