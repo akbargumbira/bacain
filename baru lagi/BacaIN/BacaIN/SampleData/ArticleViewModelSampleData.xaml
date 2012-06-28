@@ -1,0 +1,18 @@
+﻿<local:ArticleViewModel 
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"       
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:BacaIN" 
+    SampleProperty="Sample Text Property Value">
+
+    <local:ArticleViewModel.articleSources>
+        <local:Article Title="Design 1" Description="aaa" Body="aaaa" Image="/images/France.png"/>
+        <local:Article Title="Design 2" Description="aab" Body="aaaa" Image="/images/France.png"/>
+        <local:Article Title="Design 3" Description="aac" Body="aaaa" Image="/images/France.png"/>
+        <local:Article Title="Design 4" Description="aad" Body="aaaa" Image="/images/France.png"/>
+        <local:Article Title="Design 5" Description="aae" Body="aaaa" Image="/images/France.png"/>
+        <local:Article Title="Design 6" Description="aaf" Body="aaaa" Image="/images/France.png"/>
+    </local:ArticleViewModel.articleSources>
+
+
+
+</local:ArticleViewModel>

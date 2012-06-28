@@ -1,0 +1,49 @@
+﻿<UserControl
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity" 
+    xmlns:eim="clr-namespace:Microsoft.Expression.Interactivity.Media;assembly=Microsoft.Expression.Interactions"
+    x:Class="BacaIN.UserControls.Loader" mc:Ignorable="d" x:Name="phonePage">
+	<UserControl.Resources>
+		<Storyboard x:Name="LoaderAnimation">
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.Rotation)" 
+                                           Storyboard.TargetName="canvas" 
+                                           RepeatBehavior="Forever">
+				<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:3" Value="360"/>
+			</DoubleAnimationUsingKeyFrames>
+		</Storyboard>
+	</UserControl.Resources>
+    
+	<i:Interaction.Triggers>
+		<i:EventTrigger EventName="Loaded">
+            <eim:ControlStoryboardAction Storyboard="{StaticResource LoaderAnimation}"/>
+		</i:EventTrigger>
+	</i:Interaction.Triggers>
+    
+    <Viewbox x:Name="LayoutRoot" HorizontalAlignment="Left" VerticalAlignment="Top">
+		<Canvas x:Name="canvas" Height="323" Width="308" RenderTransformOrigin="0.5,0.5">
+			<Canvas.RenderTransform>
+				<CompositeTransform/>
+			</Canvas.RenderTransform>
+            <Ellipse Fill="{Binding Foreground, ElementName=phonePage, FallbackValue=Colors.White}" 
+                     Height="71" Canvas.Left="121" Canvas.Top="21" Width="69" Opacity="0.3"/>
+            <Ellipse Fill="{Binding Foreground, ElementName=phonePage, FallbackValue=Colors.White}" 
+                     Height="71" Width="69" Canvas.Left="194" Canvas.Top="52" Opacity="0.4"/>
+            <Ellipse Fill="{Binding Foreground, ElementName=phonePage, FallbackValue=Colors.White}" 
+                     Width="69" Height="71" Canvas.Left="221" Canvas.Top="123" Opacity="0.5"/>
+            <Ellipse Fill="{Binding Foreground, ElementName=phonePage, FallbackValue=Colors.White}" 
+                     Width="69" Height="71" Canvas.Left="190" Canvas.Top="198" Opacity="0.6"/>
+            <Ellipse Fill="{Binding Foreground, ElementName=phonePage, FallbackValue=Colors.White}" 
+                     Height="71" Canvas.Left="121" Canvas.Top="226" Width="69" Opacity="0.7"/>
+            <Ellipse Fill="{Binding Foreground, ElementName=phonePage, FallbackValue=Colors.White}" 
+                     Width="69" Height="71" Canvas.Left="48" Canvas.Top="194" Opacity="0.8"/>
+            <Ellipse Fill="{Binding Foreground, ElementName=phonePage, FallbackValue=Colors.White}" 
+                     Height="71" Width="69" Canvas.Left="17" Canvas.Top="123" Opacity="0.9"/>
+            <Ellipse Fill="{Binding Foreground, ElementName=phonePage, FallbackValue=Colors.White}" 
+                     Height="71" Width="69" Canvas.Left="48" Canvas.Top="52" Opacity="1.0"/>
+    	</Canvas>
+	</Viewbox>
+</UserControl>
