@@ -158,6 +158,23 @@ namespace BacaIN
                 }
             }
 
+            private String hashtag;
+            public String Hashtag
+            {
+                get
+                {
+                    return hashtag;
+                }
+                set
+                {
+                    if (this.hashtag != value)
+                    {
+                        this.hashtag = value;
+                        this.OnPropertyChanged("Hashtag");
+                    }
+                }
+            }
+
             public Article()
             {
             }

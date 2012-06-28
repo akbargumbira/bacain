@@ -7,7 +7,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
     xmlns:UserControls="clr-namespace:BacaIN.UserControls"
-    mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="768" 
+    mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="696" 
     d:DataContext="{d:DesignData SampleData/ArticleViewModelSampleData.xaml}"
     FontFamily="{StaticResource PhoneFontFamilyNormal}"
     FontSize="{StaticResource PhoneFontSizeNormal}"
@@ -43,7 +43,7 @@
             <Grid x:Name="grLeisure" HorizontalAlignment="Right" Margin="0,216,63,251" Width="140" Background="#FFF09609" Tap="grLeisureClick">
             	<TextBlock TextWrapping="Wrap" Text="l" TextAlignment="Center" Height="120" FontSize="120" VerticalAlignment="Bottom" Margin="0,0,2,28" FontFamily="Calibri" Foreground="Black"/>
             	<Border BorderThickness="3" HorizontalAlignment="Right" Height="56" VerticalAlignment="Bottom" Width="140" Background="#BF000000">
-            		<TextBlock TextWrapping="Wrap" Text="Leisure" TextAlignment="Center" Height="49" FontSize="20" VerticalAlignment="Bottom" Margin="-1,0,1,-6"/>
+            		<TextBlock TextWrapping="Wrap" Text="Leisure" TextAlignment="Center" Height="49" FontSize="25" VerticalAlignment="Bottom" Margin="-1,0,1,-6"/>
             	</Border>
             	<Ellipse Height="40" Margin="0,4,4,0" VerticalAlignment="Top" Width="40" StrokeThickness="4" HorizontalAlignment="Right" d:LayoutOverrides="Width" StrokeDashArray="1 0" Fill="#FF933D00"/>
             	<TextBlock x:Name="tBUnreadLeisure" TextWrapping="Wrap" Text="99+" TextAlignment="Center" Height="24" FontSize="16" VerticalAlignment="Top" Margin="0,14,2,0" HorizontalAlignment="Right" Width="41" Foreground="White" FontFamily="Calibri"/>
@@ -56,7 +56,7 @@
                 </Grid.ColumnDefinitions>
                 <TextBlock TextWrapping="Wrap" Text="i" TextAlignment="Center" Height="120" FontSize="120" VerticalAlignment="Bottom" Margin="0,0,2,28" FontFamily="Calibri" Foreground="Black" Grid.ColumnSpan="2" />
             	<Border BorderThickness="3" HorizontalAlignment="Right" Height="56" VerticalAlignment="Bottom" Width="140" Background="#BF000000" Grid.ColumnSpan="2">
-            		<TextBlock TextWrapping="Wrap" Text="Inspiration" TextAlignment="Center" Height="49" FontSize="20" VerticalAlignment="Bottom" Margin="-1,0,1,-6"/>
+            		<TextBlock TextWrapping="Wrap" Text="Inspiration" TextAlignment="Center" Height="49" FontSize="25" VerticalAlignment="Bottom" Margin="-1,0,1,-6"/>
             	</Border>
             	<Ellipse Height="40" Margin="0,4,4,0" VerticalAlignment="Top" Width="40" StrokeThickness="4" HorizontalAlignment="Right" d:LayoutOverrides="Width" StrokeDashArray="1 0" Fill="#FF107402" Grid.ColumnSpan="2" />
             	<TextBlock x:Name="tBUnreadInspiration" TextWrapping="Wrap" Text="99+" TextAlignment="Center" Height="24" FontSize="16" VerticalAlignment="Top" Margin="0,14,2,0" HorizontalAlignment="Right" Width="41" Foreground="White" FontFamily="Calibri" Grid.ColumnSpan="2" />
@@ -65,7 +65,7 @@
             <Grid x:Name="grCommunity" HorizontalAlignment="Left" Height="140" Margin="47,0,0,67" VerticalAlignment="Bottom" Width="140" Background="#FFF91600" Tap="grCommunityClick">
             	<TextBlock TextWrapping="Wrap" Text="c" TextAlignment="Center" Height="120" FontSize="120" VerticalAlignment="Bottom" Margin="0,0,2,28" FontFamily="Calibri" Foreground="Black"/>
             	<Border BorderThickness="3" HorizontalAlignment="Right" Height="56" VerticalAlignment="Bottom" Width="140" Background="#BF000000">
-            		<TextBlock TextWrapping="Wrap" Text="Community" TextAlignment="Center" Height="49" FontSize="20" VerticalAlignment="Bottom" Margin="-1,0,1,-6"/>
+            		<TextBlock TextWrapping="Wrap" Text="Community" TextAlignment="Center" Height="49" FontSize="25" VerticalAlignment="Bottom" Margin="-1,0,1,-6"/>
             	</Border>
             	<Ellipse Height="40" Margin="0,4,4,0" VerticalAlignment="Top" Width="40" StrokeThickness="4" HorizontalAlignment="Right" d:LayoutOverrides="Width" StrokeDashArray="1 0" Fill="#FF8F0D00"/>
             	<TextBlock x:Name="tBUnreadCommunity" TextWrapping="Wrap" Text="99+" TextAlignment="Center" Height="24" FontSize="16" VerticalAlignment="Top" Margin="0,14,2,0" HorizontalAlignment="Right" Width="41" Foreground="White" FontFamily="Calibri"/>
@@ -74,7 +74,7 @@
             <Grid x:Name="grSmart" HorizontalAlignment="Left" Height="140" Margin="47,36,0,0" VerticalAlignment="Top" Width="140" Background="#FFFDFF00" Tap="grSmartClick">
             	<TextBlock TextWrapping="Wrap" Text="smart" TextAlignment="Center" Height="120" FontSize="120" VerticalAlignment="Bottom" Margin="0,0,2,28" FontFamily="Calibri" Foreground="Black"/>
             	<Border BorderThickness="3" HorizontalAlignment="Right" Height="56" VerticalAlignment="Bottom" Width="140" Background="#BF000000">
-            		<TextBlock TextWrapping="Wrap" Text="Smart" TextAlignment="Center" Height="49" FontSize="20" VerticalAlignment="Bottom" Margin="-1,0,1,-6"/>
+            		<TextBlock TextWrapping="Wrap" Text="Smart" TextAlignment="Center" Height="49" FontSize="25" VerticalAlignment="Bottom" Margin="-1,0,1,-6"/>
             	</Border>
             	<Ellipse Height="40" Margin="0,4,4,0" VerticalAlignment="Top" Width="40" StrokeThickness="4" HorizontalAlignment="Right" d:LayoutOverrides="Width" StrokeDashArray="1 0" Fill="#FFFF5D00"/>
             	<TextBlock x:Name="tBUnreadSmart" TextWrapping="Wrap" Text="99+" TextAlignment="Center" Height="24" FontSize="16" VerticalAlignment="Top" Margin="0,14,2,0" HorizontalAlignment="Right" Width="41" Foreground="White" FontFamily="Calibri"/>
@@ -83,15 +83,10 @@
     </Grid>
  
     <!--Sample code showing usage of ApplicationBar-->
-    <!--<phone:PhoneApplicationPage.ApplicationBar>
+    <phone:PhoneApplicationPage.ApplicationBar>
         <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
-            <shell:ApplicationBarIconButton IconUri="/Images/appbar_button1.png" Text="Button 1"/>
-            <shell:ApplicationBarIconButton IconUri="/Images/appbar_button2.png" Text="Button 2"/>
-            <shell:ApplicationBar.MenuItems>
-                <shell:ApplicationBarMenuItem Text="MenuItem 1"/>
-                <shell:ApplicationBarMenuItem Text="MenuItem 2"/>
-            </shell:ApplicationBar.MenuItems>
+            <shell:ApplicationBarIconButton x:Name="btnLabel" IconUri="/images/appbar.save.rest.png" Text="Edit Label" Click="btnLabel_Click"/>
         </shell:ApplicationBar>
-    </phone:PhoneApplicationPage.ApplicationBar>-->
+    </phone:PhoneApplicationPage.ApplicationBar>
 
 </phone:PhoneApplicationPage>
