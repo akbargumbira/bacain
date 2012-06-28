@@ -12,6 +12,22 @@ c:\users\danang\documents\visual studio 2010\Projects\BacaIN\BacaIN\obj\Debug\Ba
 c:\users\danang\documents\visual studio 2010\Projects\BacaIN\BacaIN\obj\Debug\BacaIN.dll
 c:\users\danang\documents\visual studio 2010\Projects\BacaIN\BacaIN\obj\Debug\BacaIN.pdb
 c:\users\danang\documents\visual studio 2010\Projects\BacaIN\BacaIN\obj\Debug\XapCacheFile.xml
+<<<<<<< .mine
+D:\Workspace\bacain\baru\BacaIN\BacaIN\Bin\Debug\ApplicationIcon.png
+D:\Workspace\bacain\baru\BacaIN\BacaIN\Bin\Debug\Background.png
+D:\Workspace\bacain\baru\BacaIN\BacaIN\Bin\Debug\BacaIN.dll
+D:\Workspace\bacain\baru\BacaIN\BacaIN\Bin\Debug\BacaIN.pdb
+D:\Workspace\bacain\baru\BacaIN\BacaIN\Bin\Debug\AppManifest.xaml
+D:\Workspace\bacain\baru\BacaIN\BacaIN\Bin\Debug\BacaIN.xap
+D:\Workspace\bacain\baru\BacaIN\BacaIN\obj\Debug\ResolveAssemblyReference.cache
+D:\Workspace\bacain\baru\BacaIN\BacaIN\obj\Debug\App.g.i.cs
+D:\Workspace\bacain\baru\BacaIN\BacaIN\obj\Debug\DetailsPage.g.i.cs
+D:\Workspace\bacain\baru\BacaIN\BacaIN\obj\Debug\MainPage.g.i.cs
+D:\Workspace\bacain\baru\BacaIN\BacaIN\obj\Debug\BacaIN.g.resources
+D:\Workspace\bacain\baru\BacaIN\BacaIN\obj\Debug\BacaIN.dll
+D:\Workspace\bacain\baru\BacaIN\BacaIN\obj\Debug\BacaIN.pdb
+D:\Workspace\bacain\baru\BacaIN\BacaIN\obj\Debug\XapCacheFile.xml
+=======
 D:\Informatics\hackontent\bacaIn\baru\BacaIN\BacaIN\Bin\Debug\ApplicationIcon.png
 D:\Informatics\hackontent\bacaIn\baru\BacaIN\BacaIN\Bin\Debug\Background.png
 D:\Informatics\hackontent\bacaIn\baru\BacaIN\BacaIN\Bin\Debug\BacaIN.dll
@@ -29,4 +45,31 @@ D:\Informatics\hackontent\bacaIn\baru\BacaIN\BacaIN\obj\Debug\XapCacheFile.xml
 D:\Informatics\hackontent\bacaIn\baru\BacaIN\BacaIN\Bin\Debug\Newtonsoft.Json.dll
 D:\Informatics\hackontent\bacaIn\baru\BacaIN\BacaIN\Bin\Debug\Newtonsoft.Json.pdb
 D:\Informatics\hackontent\bacaIn\baru\BacaIN\BacaIN\Bin\Debug\Newtonsoft.Json.xml
-D:\Informatics\hackontent\bacaIn\baru\BacaIN\BacaIN\obj\Debug\HomePage.g.i.cs
+>>>>>>> .r9
+D:\Workspace\bacain\baru\BacaIN\BacaIN\Bin\Debug\Newtonsoft.Json.dll
+D:\Workspace\bacain\baru\BacaIN\BacaIN\Bin\Debug\Newtonsoft.Json.pdb
+D:\Workspace\bacain\baru\BacaIN\BacaIN\Bin\Debug\Newtonsoft.Json.xml
+D:\Workspace\bacain\baru\BacaIN\BacaIN\Bin\Debug\Microsoft.Expression.Interactions.dll
+D:\Workspace\bacain\baru\BacaIN\BacaIN\Bin\Debug\System.Windows.Interactivity.dll
+D:\Workspace\bacain\baru\BacaIN\BacaIN\Bin\Debug\Microsoft.Expression.Interactions.xml
+D:\Workspace\bacain\baru\BacaIN\BacaIN\Bin\Debug\System.Windows.Interactivity.xml
+D:\Workspace\bacain\baru\BacaIN\BacaIN\Bin\Debug\de\Microsoft.Expression.Interactions.resources.dll
+D:\Workspace\bacain\baru\BacaIN\BacaIN\Bin\Debug\en\Microsoft.Expression.Interactions.resources.dll
+D:\Workspace\bacain\baru\BacaIN\BacaIN\Bin\Debug\es\Microsoft.Expression.Interactions.resources.dll
+D:\Workspace\bacain\baru\BacaIN\BacaIN\Bin\Debug\fr\Microsoft.Expression.Interactions.resources.dll
+D:\Workspace\bacain\baru\BacaIN\BacaIN\Bin\Debug\it\Microsoft.Expression.Interactions.resources.dll
+D:\Workspace\bacain\baru\BacaIN\BacaIN\Bin\Debug\ja\Microsoft.Expression.Interactions.resources.dll
+D:\Workspace\bacain\baru\BacaIN\BacaIN\Bin\Debug\ko\Microsoft.Expression.Interactions.resources.dll
+D:\Workspace\bacain\baru\BacaIN\BacaIN\Bin\Debug\zh-Hans\Microsoft.Expression.Interactions.resources.dll
+D:\Workspace\bacain\baru\BacaIN\BacaIN\Bin\Debug\zh-Hant\Microsoft.Expression.Interactions.resources.dll
+D:\Workspace\bacain\baru\BacaIN\BacaIN\Bin\Debug\de\System.Windows.Interactivity.resources.dll
+D:\Workspace\bacain\baru\BacaIN\BacaIN\Bin\Debug\en\System.Windows.Interactivity.resources.dll
+D:\Workspace\bacain\baru\BacaIN\BacaIN\Bin\Debug\es\System.Windows.Interactivity.resources.dll
+D:\Workspace\bacain\baru\BacaIN\BacaIN\Bin\Debug\fr\System.Windows.Interactivity.resources.dll
+D:\Workspace\bacain\baru\BacaIN\BacaIN\Bin\Debug\it\System.Windows.Interactivity.resources.dll
+D:\Workspace\bacain\baru\BacaIN\BacaIN\Bin\Debug\ja\System.Windows.Interactivity.resources.dll
+D:\Workspace\bacain\baru\BacaIN\BacaIN\Bin\Debug\ko\System.Windows.Interactivity.resources.dll
+D:\Workspace\bacain\baru\BacaIN\BacaIN\Bin\Debug\zh-Hans\System.Windows.Interactivity.resources.dll
+D:\Workspace\bacain\baru\BacaIN\BacaIN\Bin\Debug\zh-Hant\System.Windows.Interactivity.resources.dll
+D:\Workspace\bacain\baru\BacaIN\BacaIN\obj\Debug\DetailsArticlePage.g.i.cs
+D:\Workspace\bacain\baru\BacaIN\BacaIN\obj\Debug\HomePage.g.i.cs

@@ -52,14 +52,14 @@ namespace BacaIN
         private void MainListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             // If selected index is -1 (no selection) do nothing
-            if (MainListBox.SelectedIndex == -1)
+            /*if (MainListBox.SelectedIndex == -1)
                 return;
 
             // Navigate to the new page
             NavigationService.Navigate(new Uri("/DetailsPage.xaml?selectedItem=" + MainListBox.SelectedIndex, UriKind.Relative));
 
             // Reset selected index to -1 (no selection)
-            MainListBox.SelectedIndex = -1;
+            MainListBox.SelectedIndex = -1;*/
         }
 
         // Load data for the ViewModel Items

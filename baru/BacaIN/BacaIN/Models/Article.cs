@@ -157,5 +157,21 @@ namespace BacaIN
                     }
                 }
             }
+
+            public Article()
+            {
+            }
+
+            public Article(Article a)
+            {
+                this.title = a.title;
+                this.description = a.description;
+                this.body = a.body;
+                this.image = a.image;
+                this.node_id = a.node_id;
+                this.published = a.published;
+                this.url = a.url;
+                this.view_count = a.view_count;
+            }
         }
 }
