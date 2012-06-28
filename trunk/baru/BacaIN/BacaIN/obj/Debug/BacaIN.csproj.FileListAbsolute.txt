@@ -1,0 +1,14 @@
+c:\users\danang\documents\visual studio 2010\Projects\BacaIN\BacaIN\Bin\Debug\ApplicationIcon.png
+c:\users\danang\documents\visual studio 2010\Projects\BacaIN\BacaIN\Bin\Debug\Background.png
+c:\users\danang\documents\visual studio 2010\Projects\BacaIN\BacaIN\Bin\Debug\BacaIN.dll
+c:\users\danang\documents\visual studio 2010\Projects\BacaIN\BacaIN\Bin\Debug\BacaIN.pdb
+c:\users\danang\documents\visual studio 2010\Projects\BacaIN\BacaIN\Bin\Debug\AppManifest.xaml
+c:\users\danang\documents\visual studio 2010\Projects\BacaIN\BacaIN\Bin\Debug\BacaIN.xap
+c:\users\danang\documents\visual studio 2010\Projects\BacaIN\BacaIN\obj\Debug\ResolveAssemblyReference.cache
+c:\users\danang\documents\visual studio 2010\Projects\BacaIN\BacaIN\obj\Debug\App.g.i.cs
+c:\users\danang\documents\visual studio 2010\Projects\BacaIN\BacaIN\obj\Debug\DetailsPage.g.i.cs
+c:\users\danang\documents\visual studio 2010\Projects\BacaIN\BacaIN\obj\Debug\MainPage.g.i.cs
+c:\users\danang\documents\visual studio 2010\Projects\BacaIN\BacaIN\obj\Debug\BacaIN.g.resources
+c:\users\danang\documents\visual studio 2010\Projects\BacaIN\BacaIN\obj\Debug\BacaIN.dll
+c:\users\danang\documents\visual studio 2010\Projects\BacaIN\BacaIN\obj\Debug\BacaIN.pdb
+c:\users\danang\documents\visual studio 2010\Projects\BacaIN\BacaIN\obj\Debug\XapCacheFile.xml
