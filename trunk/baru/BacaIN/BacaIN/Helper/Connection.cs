@@ -61,7 +61,7 @@ namespace BacaIN
                     {
                         Title = jsonArticle.title,
                         Description = jsonArticle.description,
-                        Image = jsonArticle.image.xmedium,
+                        Image = jsonArticle.image.medium,
                         Body = jsonArticle.body,
                         Node_id = jsonArticle.node_id,
                         Published = jsonArticle.published,
