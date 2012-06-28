@@ -10,22 +10,12 @@
     xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
     xmlns:ec="clr-namespace:Microsoft.Expression.Interactivity.Core;assembly=Microsoft.Expression.Interactions"
     mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="768" 
-    xmlns:u="clr-namespace:BacaIN.WindowsPhone7Unleashed" 
-    xmlns:ValueConverters="clr-namespace:BacaIN.WindowsPhone7Unleashed.ValueConverters"
     d:DataContext="{d:DesignData SampleData/ArticleViewModelSampleData.xaml}"
     FontFamily="{StaticResource PhoneFontFamilyNormal}"
     FontSize="{StaticResource PhoneFontSizeNormal}"
     Foreground="{StaticResource PhoneForegroundBrush}"
     SupportedOrientations="Portrait"  Orientation="Portrait"
     shell:SystemTray.IsVisible="True">
-
-    <phone:PhoneApplicationPage.Resources>
-        <ValueConverters:BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" />
-        <Style x:Key="LoadingStyle" 
-               TargetType="TextBlock" BasedOn="{StaticResource PhoneTextAccentStyle}">
-            <Setter Property="FontSize" Value="16" />
-        </Style>
-    </phone:PhoneApplicationPage.Resources>
 
     <!--Data context is set to sample data above and LayoutRoot contains the root grid where all other page content is placed-->
     <Grid x:Name="LayoutRoot" Background="Transparent">
@@ -42,30 +32,20 @@
 
         <!--ContentPanel contains ListBox and ListBox ItemTemplate. Place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
-            <ListBox x:Name="MainListBox" Margin="0,0,-12,0" ItemsSource="{Binding articleSources}" SelectionChanged="MainListBox_SelectionChanged"
-                     u:ScrollViewerMonitor.AtEndCommand="{Binding FetchMoreDataCommand}">
+            <ListBox x:Name="MainListBox" Margin="0,0,-12,0" ItemsSource="{Binding articleSources}" SelectionChanged="MainListBox_SelectionChanged" IsSynchronizedWithCurrentItem="False" Background="#00ABABAB"> <!--SelectedIndex="{Binding ListSelectedIndex, Mode=TwoWay}">-->
                 <ListBox.ItemTemplate>
                     <DataTemplate>
-                      <StackPanel Margin="0,0,0,17" Width="432" Height="100">
-                            <Image Source="{Binding Image}" Stretch="None" MaxWidth="200" MaxHeight="20" />
-                            <TextBlock Text="{Binding Title}" TextWrapping="Wrap" Style="{StaticResource PhoneTextExtraLargeStyle}"/>
-                            <TextBlock Text="{Binding Description}" TextWrapping="Wrap" Margin="12,-6,12,0" Style="{StaticResource PhoneTextSubtleStyle}"/>  
+                      <StackPanel Margin="0,0,0,17" Width="432" Height="140">
+                            <!--<UserControls:Loader Width="100" Height="100"/> -->
+							<Border BorderThickness="10,0,0,0" Height="120" Margin="0,8,8,0" VerticalAlignment="Top" HorizontalAlignment="Left" BorderBrush="#FFD00987">
+                				<Image Source="{Binding Image}" Stretch="None" Width="100" Height="100" MaxWidth="110" MaxHeight="110" />
+                			</Border>                            
+                            <TextBlock Text="{Binding Title}" Margin="130,-130,0,70" FontSize="32" FontWeight="Bold" MaxWidth="300" MaxHeight="50" TextWrapping="Wrap" Style="{StaticResource PhoneTextExtraLargeStyle}"/>
+                            <TextBlock Text="{Binding Description}" Margin="130,-75,0,0" FontSize="17" Foreground="#FFABABAB" TextWrapping="Wrap" MaxWidth="300" MaxHeight="60" Style="{StaticResource PhoneTextSubtleStyle}"/>  
                         </StackPanel>
                     </DataTemplate>
                 </ListBox.ItemTemplate>
             </ListBox>
-            <Grid Grid.Row="1"
-                  Visibility="{Binding Busy, 
-                        Converter={StaticResource BooleanToVisibilityConverter}}">
-                <Grid.RowDefinitions>
-                    <RowDefinition />
-                    <RowDefinition />
-                </Grid.RowDefinitions>
-                
-                <ProgressBar IsIndeterminate="{Binding Busy}"
-                             VerticalAlignment="Bottom"
-                             Grid.Row="1" Foreground="Blue" FontSize="20" HorizontalAlignment="Stretch" />
-            </Grid>
         </Grid>
     </Grid>
  
