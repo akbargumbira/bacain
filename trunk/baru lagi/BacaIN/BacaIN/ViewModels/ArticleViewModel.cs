@@ -12,6 +12,7 @@ using System.Collections.ObjectModel;
 using BacaIN.WindowsPhone7Unleashed;
 using System.ComponentModel;
 using System.Threading;
+using Newtonsoft.Json;
 
 namespace BacaIN
 {
@@ -81,11 +82,40 @@ namespace BacaIN
         public static int offset = 0;
         public void LoadData()
         {
-            Connection conn = new Connection();
-            System.Diagnostics.Debug.WriteLine("Channel selected:" + MainPage.idChannel);
-            conn.getRSS(MainPage.idChannel, 10, offset);
-            offset += 10;
-            this.isDataLoaded = true;
+            if (HomePage.mode == 0) //Koneksi inet
+            {
+                Connection conn = new Connection();
+                System.Diagnostics.Debug.WriteLine("Channel selected:" + MainPage.idChannel);
+                conn.getRSS(MainPage.idChannel, 10, offset);
+                offset += 10;
+                this.isDataLoaded = true;
+            } 
+            else if(HomePage.mode == 1)
+            {
+                String hashtagSearch = "#okebanget"; //inputUser
+                String filename = "label.dat"; //FIlename artikel yang disimpan (yg punya hashtag)
+
+                //Baca FIle:
+                IOHandler ioHandler = new IOHandler();
+                String jsonArticles = ioHandler.ReadFile(filename);
+
+                //Deserialisasi
+                Articles articles = JsonConvert.DeserializeObject<Articles>(jsonArticles);
+
+                //Ambil Article yang punya hastag = hashtagSearch:
+                Articles articlesResult = new Articles();
+                int j = 0;
+                for (int i=0; i < articles.articles.Length; ++i)
+                {
+                    Article article = articles.articles[i];
+                    if (article.Hashtag == hashtagSearch)
+                    {
+                        articles.articles[j] = article;
+                        ++j;
+                    }
+                }
+
+            }
         }
 
         readonly DelegateCommand fetchMoreDataCommand;
