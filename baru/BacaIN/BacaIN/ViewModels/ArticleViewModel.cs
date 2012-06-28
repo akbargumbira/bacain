@@ -9,7 +9,9 @@ using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Shapes;
 using System.Collections.ObjectModel;
-using BacaIN.ViewModels.Commands;
+using BacaIN.WindowsPhone7Unleashed;
+using System.ComponentModel;
+using System.Threading;
 
 namespace BacaIN
 {
@@ -52,64 +54,67 @@ namespace BacaIN
         public ArticleViewModel()
         {
             this.articleSources = new ObservableCollection<Article>();
-        }
 
+            fetchMoreDataCommand = new DelegateCommand(
+                obj =>
+                {
+                    if (busy)
+                    {
+                        return;
+                    }
+                    Busy = true;
+                    ThreadPool.QueueUserWorkItem(
+                        delegate
+                        {
+                            Thread.Sleep(2500);
+                            Deployment.Current.Dispatcher.BeginInvoke(
+                                delegate
+                                {
+                                    LoadData();
+                                    Busy = false;
+                                });
+                        });
+
+                });
+
+        }
+        public static int offset = 0;
         public void LoadData()
         {
             Connection conn = new Connection();
             System.Diagnostics.Debug.WriteLine("Channel selected:" + MainPage.idChannel);
-            conn.getRSS(MainPage.idChannel, 10, 0);
+            conn.getRSS(MainPage.idChannel, 10, offset);
+            offset += 10;
             this.isDataLoaded = true;
         }
 
-        /*private int _listSelectedIndex = -1;
+        readonly DelegateCommand fetchMoreDataCommand;
 
-        public int ListSelectedIndex
+        public ICommand FetchMoreDataCommand
         {
             get
             {
-                return _listSelectedIndex;
+                return fetchMoreDataCommand;
+            }
+        }
+
+        bool busy;
+
+        public bool Busy
+        {
+            get
+            {
+                return busy;
             }
             set
             {
-                if (_listSelectedIndex != value)
+                if (busy == value)
                 {
-                    _listSelectedIndex = value;
+                    return;
                 }
-
-                OnPropertyChanged("ListSelectedIndex");
+                busy = value;
+                OnPropertyChanged("Busy");
             }
         }
-
-        #region Commands
-
-        public ICommand SetArticleIdCommand
-        {
-            get
-            {
-                System.Diagnostics.Debug.WriteLine("Ff");
-                return new DelegateCommand(SetArticleId, CanSetArticleId);
-            }
-        }
-
-        private void SetArticleId(object parameter)
-        {
-            System.Diagnostics.Debug.WriteLine("Click ");
-            Article selectedItemData = parameter as Article;
-            
-            if (selectedItemData != null)
-            {
-                ArticleViewModel.show_Article = selectedItemData;
-            }
-            _listSelectedIndex = -1;
-        }
-
-        private bool CanSetArticleId(object parameter)
-        {
-            return true;
-        }
-
-        #endregion
-        */
     }
 }

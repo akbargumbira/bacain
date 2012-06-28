@@ -38,7 +38,7 @@ namespace BacaIN
                 {
                     // Showing the exact error message is useful for debugging. In a finalized application, 
                     // output a friendly and applicable string to the user instead. 
-                    MessageBox.Show(e.Error.Message);
+                    //MessageBox.Show(e.Error.Message);
                 });
             }
             else
