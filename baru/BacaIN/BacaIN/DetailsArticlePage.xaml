@@ -43,6 +43,7 @@
     <phone:PhoneApplicationPage.ApplicationBar>
         <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
             <shell:ApplicationBarIconButton x:Name="btnLabel" IconUri="/images/appbar.save.rest.png" Text="Edit Label" Click="btnLabel_Click"/>
+            <shell:ApplicationBarIconButton x:Name="btnShareFB" IconUri="/images/appbar.share.rest.png" Text="Share FB" Click="btnShareFB_Click"/>
         </shell:ApplicationBar>
     </phone:PhoneApplicationPage.ApplicationBar>
 

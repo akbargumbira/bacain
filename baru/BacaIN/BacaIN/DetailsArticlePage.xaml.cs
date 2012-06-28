@@ -11,6 +11,7 @@ using System.Windows.Media.Animation;
 using System.Windows.Shapes;
 using System.Windows.Navigation;
 using Microsoft.Phone.Controls;
+using Newtonsoft.Json;
 
 namespace BacaIN
 {
@@ -52,10 +53,38 @@ namespace BacaIN
                 App.DetailsArticle.LoadData();
             }
         }
+        private void btnShareFB_Click(object sender, EventArgs e)
+        {
+            var url = string.Format("/Facebook/LoginPage.xaml");
+
+            Dispatcher.BeginInvoke(() => NavigationService.Navigate(new Uri(url, UriKind.Relative)));
+        }
 
         private void btnLabel_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("tes");
+            String hashtag = "#okebanget"; //inputUser
+            String filename = "label.dat"; //FIlename artikel yang disimpan (yg punya hashtag)
+            
+            //Tambah hashtag ke artikel;
+            App.DetailsArticle.SelectedArticle.Hashtag = hashtag;
+
+            //Baca FIle:
+            IOHandler ioHandler = new IOHandler();
+            String jsonArticles = ioHandler.ReadFile(filename);
+
+            //Deserialisasi
+            Articles articles = JsonConvert.DeserializeObject<Articles>(jsonArticles);
+
+            //Tambah artikel yang baru ditambah hashtag:
+            int length = articles.articles.Length;
+            articles.articles[length] = App.DetailsArticle.SelectedArticle;
+
+            //Serialisasi
+            String output = JsonConvert.SerializeObject(articles);
+
+            //Save ke file filename
+            ioHandler.SaveFile(filename, output);
+
         }
 
     }
