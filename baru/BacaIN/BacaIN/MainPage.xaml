@@ -32,7 +32,7 @@
 
         <!--ContentPanel contains ListBox and ListBox ItemTemplate. Place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
-            <ListBox x:Name="MainListBox" Margin="0,0,-12,0" ItemsSource="{Binding articleSources}" SelectedIndex="{Binding ListSelectedIndex, Mode=TwoWay}">
+            <ListBox x:Name="MainListBox" Margin="0,0,-12,0" ItemsSource="{Binding articleSources}" SelectionChanged="MainListBox_SelectionChanged"> <!--SelectedIndex="{Binding ListSelectedIndex, Mode=TwoWay}">-->
                 <ListBox.ItemTemplate>
                     <DataTemplate>
                       <StackPanel Margin="0,0,0,17" Width="432" Height="100">
@@ -43,17 +43,6 @@
                         </StackPanel>
                     </DataTemplate>
                 </ListBox.ItemTemplate>
-                <ListBox.ItemsPanel>
-                    <ItemsPanelTemplate>
-                        <VirtualizingStackPanel />
-                    </ItemsPanelTemplate>
-                </ListBox.ItemsPanel>
-                <i:Interaction.Triggers>
-                    <i:EventTrigger EventName="SelectionChanged">
-                        <i:InvokeCommandAction Command="{Binding SetArticleIdCommand}" CommandParameter="{Binding Path=SelectedItem, ElementName=MainListBox}"/>
-                        <ec:NavigateToPageAction TargetPage="/DetailsArticlePage.xaml" />
-                    </i:EventTrigger>
-                </i:Interaction.Triggers>
             </ListBox>
         </Grid>
     </Grid>
