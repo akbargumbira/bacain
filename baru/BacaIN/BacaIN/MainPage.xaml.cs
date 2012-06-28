@@ -15,15 +15,38 @@ namespace BacaIN
 {
     public partial class MainPage : PhoneApplicationPage
     {
+        public static int idChannel;
+
         // Constructor
         public MainPage()
         {
             InitializeComponent();
-
+            System.Diagnostics.Debug.WriteLine("Main Page showed");
             // Set the data context of the listbox control to the sample data
             DataContext = App.ViewModel;
             this.Loaded += new RoutedEventHandler(MainPage_Loaded);
         }
+
+        protected override void OnBackKeyPress(System.ComponentModel.CancelEventArgs e)
+        {
+            base.OnBackKeyPress(e);
+            App.ViewModel.articleSources.Clear();
+            App.ViewModel.isDataLoaded = false;
+        }
+
+        /* protected override void OnNavigatedTo(System.Windows.Navigation.NavigationEventArgs e)
+        {
+            base.OnNavigatedTo(e);
+
+            // Get strId
+            string strId = "";
+            NavigationContext.QueryString.TryGetValue("idchannel", out strId);
+            System.Diagnostics.Debug.WriteLine("strId:" + strId);
+
+            // Conver string strId to int
+            idChannel = int.Parse(strId);
+            System.Diagnostics.Debug.WriteLine("idChannel:" + idChannel);
+        } */
 
         // Handle selection changed on ListBox
         private void MainListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -42,10 +65,10 @@ namespace BacaIN
         // Load data for the ViewModel Items
         private void MainPage_Loaded(object sender, RoutedEventArgs e)
         {
-            /*if (!App.ViewModel.IsDataLoaded)
+            if (!App.ViewModel.isDataLoaded)
             {
                 App.ViewModel.LoadData();
-            }*/
+            }
         }
     }
 }

@@ -45,11 +45,19 @@ namespace BacaIN
             this.articleSources.Add(new Article() { Node_id = 2, Title = "Tes 3", Description = "3333", Body = "311111111111", Image = "../images/France.png" });
         } */
 
+        public Boolean isDataLoaded = false;
+
         public ArticleViewModel()
         {
             this.articleSources = new ObservableCollection<Article>();
+        }
+
+        public void LoadData()
+        {
             Connection conn = new Connection();
-            conn.getRSS(1, 10, 0);
+            System.Diagnostics.Debug.WriteLine("Channel selected:" + MainPage.idChannel);
+            conn.getRSS(MainPage.idChannel, 10, 0);
+            this.isDataLoaded = true;
         }
 
 
