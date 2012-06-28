@@ -37,12 +37,16 @@
                     <DataTemplate>
                       <StackPanel Margin="0,0,0,17" Width="432" Height="140">
                             <!--<UserControls:Loader Width="100" Height="100"/> -->
-							<Border BorderThickness="10,0,0,0" Height="120" Margin="0,8,8,0" VerticalAlignment="Top" HorizontalAlignment="Left" BorderBrush="#FFD00987">
-                				<Image Source="{Binding Image}" Stretch="None" Width="100" Height="100" MaxWidth="110" MaxHeight="110" />
-                			</Border>                            
-                            <TextBlock Text="{Binding Title}" Margin="130,-130,0,70" FontSize="32" FontWeight="Bold" MaxWidth="300" MaxHeight="50" TextWrapping="Wrap" Style="{StaticResource PhoneTextExtraLargeStyle}"/>
-                            <TextBlock Text="{Binding Description}" Margin="130,-75,0,0" FontSize="17" Foreground="#FFABABAB" TextWrapping="Wrap" MaxWidth="300" MaxHeight="60" Style="{StaticResource PhoneTextSubtleStyle}"/>  
-                        </StackPanel>
+							<Border BorderThickness="10,0,0,0" Height="120" Margin="0,8,8,0" VerticalAlignment="Top" HorizontalAlignment="Left" BorderBrush="#FFF09609">
+                				<Image Source="{Binding Image}" Margin="0,0,0,0" Stretch="None" Width="Auto" Height="Auto" MaxWidth="110" MaxHeight="110" />
+                			</Border>
+							<!-- <Border BorderThickness="7,0,0,3" Width="350" Height="60" Margin="120,-110,0,70" VerticalAlignment="Top" HorizontalAlignment="Left" BorderBrush="#FFF09609"> -->                           
+                            	<TextBlock Text="{Binding Title}" Margin="125,-110,0,70" FontSize="22" Width="Auto" Height="Auto" MaxWidth="340" MaxHeight="60" TextWrapping="Wrap"/>
+                            <!-- </Border> -->
+							<!-- <Border BorderThickness="7,0,0,3" Width="350" Height="60" Margin="120,-75,0,70" VerticalAlignment="Top" HorizontalAlignment="Left" BorderBrush="#FFF09609"> -->
+								<TextBlock Text="{Binding Description}" Margin="130,-75,0,0" FontSize="16" Foreground="#FFABABAB" TextWrapping="Wrap" MaxWidth="300" MaxHeight="60" Style="{StaticResource PhoneTextSubtleStyle}"/>  
+                        	<!-- </Border> -->
+						</StackPanel>
                     </DataTemplate>
                 </ListBox.ItemTemplate>
             </ListBox>
