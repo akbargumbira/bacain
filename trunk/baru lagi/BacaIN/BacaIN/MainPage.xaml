@@ -52,10 +52,10 @@
                 				<Image Source="{Binding Image}" Margin="0,0,0,0" Stretch="None" Width="Auto" Height="Auto" MaxWidth="110" MaxHeight="110" />
                 			</Border>
 							<!-- <Border BorderThickness="7,0,0,3" Width="350" Height="60" Margin="120,-110,0,70" VerticalAlignment="Top" HorizontalAlignment="Left" BorderBrush="#FFF09609"> -->                           
-                            	<TextBlock Text="{Binding Title}" Margin="125,-110,0,70" FontSize="22" Width="Auto" Height="Auto" MaxWidth="340" MaxHeight="60" TextWrapping="Wrap"/>
+                            	<TextBlock Text="{Binding Title}" Margin="125,-125,0,70" FontSize="22" Width="Auto" Height="Auto" MaxWidth="340" MaxHeight="40" TextWrapping="Wrap"/>
                             <!-- </Border> -->
 							<!-- <Border BorderThickness="7,0,0,3" Width="350" Height="60" Margin="120,-75,0,70" VerticalAlignment="Top" HorizontalAlignment="Left" BorderBrush="#FFF09609"> -->
-								<TextBlock Text="{Binding Description}" Margin="130,-75,0,0" FontSize="16" Foreground="#FFABABAB" TextWrapping="Wrap" MaxWidth="300" MaxHeight="60" Style="{StaticResource PhoneTextSubtleStyle}"/>  
+								<TextBlock Text="{Binding Description}" Margin="130,-125,0,0" FontSize="18" Foreground="#FFABABAB" TextWrapping="Wrap" MaxWidth="300" MaxHeight="60"/>  
                         	<!-- </Border> -->
 						</StackPanel>
                     </DataTemplate>
