@@ -35,6 +35,17 @@ namespace BacaIN
             }
         }
 
+        private static OneArticleView oneArticle = null;
+        public static OneArticleView DetailsArticle
+        {
+            get
+            {
+                if (oneArticle == null)
+                    oneArticle = new OneArticleView();
+                return oneArticle;
+            }
+        }
+
         /// <summary>
         /// Provides easy access to the root frame of the Phone Application.
         /// </summary>
@@ -109,6 +120,7 @@ namespace BacaIN
             if (System.Diagnostics.Debugger.IsAttached)
             {
                 // A navigation has failed; break into the debugger
+                System.Diagnostics.Debug.WriteLine("error " + e.Exception.Message);
                 System.Diagnostics.Debugger.Break();
             }
         }

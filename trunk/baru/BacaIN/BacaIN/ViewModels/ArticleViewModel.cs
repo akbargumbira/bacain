@@ -9,11 +9,13 @@ using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Shapes;
 using System.Collections.ObjectModel;
+using BacaIN.ViewModels.Commands;
 
 namespace BacaIN
 {
     public class ArticleViewModel : ModelBase
     {
+        public static Article show_Article = null;
         private string _sampleProperty = "Sample Runtime Property Value";
         /// <summary>
         /// Sample ViewModel property; this property is used in the view to display its value using a Binding
@@ -60,8 +62,52 @@ namespace BacaIN
             this.isDataLoaded = true;
         }
 
+        private int _listSelectedIndex = -1;
 
+        public int ListSelectedIndex
+        {
+            get
+            {
+                return _listSelectedIndex;
+            }
+            set
+            {
+                if (_listSelectedIndex != value)
+                {
+                    _listSelectedIndex = value;
+                }
 
+                OnPropertyChanged("ListSelectedIndex");
+            }
+        }
+
+        #region Commands
+
+        public ICommand SetArticleIdCommand
+        {
+            get
+            {
+                return new DelegateCommand(SetArticleId, CanSetArticleId);
+            }
+        }
+
+        private void SetArticleId(object parameter)
+        {
+            Article selectedItemData = parameter as Article;
+            
+            if (selectedItemData != null)
+            {
+                ArticleViewModel.show_Article = selectedItemData;
+            }
+            _listSelectedIndex = -1;
+        }
+
+        private bool CanSetArticleId(object parameter)
+        {
+            return true;
+        }
+
+        #endregion
 
     }
 }
