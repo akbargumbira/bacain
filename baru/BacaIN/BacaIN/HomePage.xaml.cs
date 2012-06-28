@@ -21,32 +21,16 @@ namespace BacaIN
             InitializeComponent();
         }
 
-        
-        private void buttonSmart_Click(object sender, RoutedEventArgs e)
+        private void grMindBodyClick(object sender, System.Windows.Input.GestureEventArgs e)
         {
             ArticleViewModel.offset = 0;
-            MainPage.idChannel = 1;
-            System.Diagnostics.Debug.WriteLine("Button Smart CLicked");
+            System.Diagnostics.Debug.WriteLine("Button Mind Body Soul CLicked");
+            MainPage.idChannel = 2;
             NavigationService.Navigate(new Uri("/MainPage.xaml", UriKind.Relative));
         }
 
-        private void buttonInspiration_Click(object sender, RoutedEventArgs e)
-        {
-            ArticleViewModel.offset = 0;
-            System.Diagnostics.Debug.WriteLine("Button Inspiration CLicked");
-            MainPage.idChannel = 4;
-            NavigationService.Navigate(new Uri("/MainPage.xaml", UriKind.Relative));
-        }
 
-        private void buttonCommunity_Click(object sender, RoutedEventArgs e)
-        {
-            ArticleViewModel.offset = 0;
-            System.Diagnostics.Debug.WriteLine("Button Community CLicked");
-            MainPage.idChannel = 5;
-            NavigationService.Navigate(new Uri("/MainPage.xaml", UriKind.Relative));
-        }
-
-        private void buttonLeisure_Click(object sender, RoutedEventArgs e)
+        private void grLeisureClick(object sender, System.Windows.Input.GestureEventArgs e)
         {
             ArticleViewModel.offset = 0;
             System.Diagnostics.Debug.WriteLine("Button Leisure CLicked");
@@ -54,11 +38,27 @@ namespace BacaIN
             NavigationService.Navigate(new Uri("/MainPage.xaml", UriKind.Relative));
         }
 
-        private void buttonMindBodySoul_Click(object sender, RoutedEventArgs e)
+        private void grInspirationClick(object sender, System.Windows.Input.GestureEventArgs e)
         {
             ArticleViewModel.offset = 0;
-            System.Diagnostics.Debug.WriteLine("Button Mind Body Soul CLicked");
-            MainPage.idChannel = 2;
+            System.Diagnostics.Debug.WriteLine("Button Inspiration CLicked");
+            MainPage.idChannel = 4;
+            NavigationService.Navigate(new Uri("/MainPage.xaml", UriKind.Relative));
+        }
+
+        private void grCommunityClick(object sender, System.Windows.Input.GestureEventArgs e)
+        {
+            ArticleViewModel.offset = 0;
+            System.Diagnostics.Debug.WriteLine("Button Community CLicked");
+            MainPage.idChannel = 5;
+            NavigationService.Navigate(new Uri("/MainPage.xaml", UriKind.Relative));
+        }
+
+        private void grSmartClick(object sender, System.Windows.Input.GestureEventArgs e)
+        {
+            ArticleViewModel.offset = 0;
+            MainPage.idChannel = 1;
+            System.Diagnostics.Debug.WriteLine("Button Smart CLicked");
             NavigationService.Navigate(new Uri("/MainPage.xaml", UriKind.Relative));
         }
     }
