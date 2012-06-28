@@ -27,7 +27,7 @@ namespace BacaIN
         protected override void OnBackKeyPress(System.ComponentModel.CancelEventArgs e)
         {
             base.OnBackKeyPress(e);
-            App.DetailsArticle.SelectedArticle = null;
+            //App.DetailsArticle.SelectedArticle = null;
             App.DetailsArticle.isDataLoaded = false;
         }
 

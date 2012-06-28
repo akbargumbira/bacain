@@ -62,7 +62,7 @@ namespace BacaIN
             this.isDataLoaded = true;
         }
 
-        private int _listSelectedIndex = -1;
+        /*private int _listSelectedIndex = -1;
 
         public int ListSelectedIndex
         {
@@ -87,12 +87,14 @@ namespace BacaIN
         {
             get
             {
+                System.Diagnostics.Debug.WriteLine("Ff");
                 return new DelegateCommand(SetArticleId, CanSetArticleId);
             }
         }
 
         private void SetArticleId(object parameter)
         {
+            System.Diagnostics.Debug.WriteLine("Click ");
             Article selectedItemData = parameter as Article;
             
             if (selectedItemData != null)
@@ -108,6 +110,6 @@ namespace BacaIN
         }
 
         #endregion
-
+        */
     }
 }
