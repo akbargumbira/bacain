@@ -38,21 +38,21 @@ namespace BacaIN
 
         private void buttonCommunity_Click(object sender, RoutedEventArgs e)
         {
-            System.Diagnostics.Debug.WriteLine("Button Inspiration CLicked");
+            System.Diagnostics.Debug.WriteLine("Button Community CLicked");
             MainPage.idChannel = 5;
             NavigationService.Navigate(new Uri("/MainPage.xaml", UriKind.Relative));
         }
 
         private void buttonLeisure_Click(object sender, RoutedEventArgs e)
         {
-            System.Diagnostics.Debug.WriteLine("Button Inspiration CLicked");
+            System.Diagnostics.Debug.WriteLine("Button Leisure CLicked");
             MainPage.idChannel = 3;
             NavigationService.Navigate(new Uri("/MainPage.xaml", UriKind.Relative));
         }
 
         private void buttonMindBodySoul_Click(object sender, RoutedEventArgs e)
         {
-            System.Diagnostics.Debug.WriteLine("Button Inspiration CLicked");
+            System.Diagnostics.Debug.WriteLine("Button Mind Body Soul CLicked");
             MainPage.idChannel = 2;
             NavigationService.Navigate(new Uri("/MainPage.xaml", UriKind.Relative));
         }
