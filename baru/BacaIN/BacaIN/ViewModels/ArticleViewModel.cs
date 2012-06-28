@@ -37,13 +37,21 @@ namespace BacaIN
 
         public ObservableCollection<Article> articleSources { get; private set; }
 
-        public ArticleViewModel()
+        /* public ArticleViewModel()
         {
             this.articleSources = new ObservableCollection<Article>();
             this.articleSources.Add(new Article() { Node_id = 0, Title = "Tes 1", Description = "1111", Body = "111111111111", Image="../images/France.png" });
             this.articleSources.Add(new Article() { Node_id = 1, Title = "Tes 2", Description = "2222", Body = "211111111111", Image = "../images/France.png" });
             this.articleSources.Add(new Article() { Node_id = 2, Title = "Tes 3", Description = "3333", Body = "311111111111", Image = "../images/France.png" });
+        } */
+
+        public ArticleViewModel()
+        {
+            this.articleSources = new ObservableCollection<Article>();
+            Connection conn = new Connection();
+            conn.getRSS(1, 10, 0);
         }
+
 
 
 

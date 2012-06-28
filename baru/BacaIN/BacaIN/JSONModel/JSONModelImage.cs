@@ -11,9 +11,9 @@ using System.Windows.Shapes;
 
 namespace BacaIN
 {
-    public class Image
+    public class JSONModelImage
     {
-        public Image()
+        public JSONModelImage()
         {
 
         }

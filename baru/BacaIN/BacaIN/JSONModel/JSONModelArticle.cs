@@ -11,16 +11,16 @@ using System.Windows.Shapes;
 
 namespace BacaIN
 {
-    public class Article
+    public class JSONModelArticle
     {
-        public Article()
+        public JSONModelArticle()
         {
 
         }
 
         public String body;
         public String description;
-        public Image image;
+        public JSONModelImage image;
         public int node_id;
         public int published;
         public String title;
