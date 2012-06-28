@@ -26,7 +26,7 @@ namespace BacaIN
             ArticleViewModel.offset = 0;
             System.Diagnostics.Debug.WriteLine("Button Mind Body Soul CLicked");
             MainPage.idChannel = 2;
-            NavigationService.Navigate(new Uri("/MainPage.xaml?page_name=Mind%20Body%Soul", UriKind.Relative));
+            NavigationService.Navigate(new Uri(Uri.EscapeUriString("/MainPage.xaml?page_name=Mind Body Soul"), UriKind.Relative));
         }
 
 
@@ -51,7 +51,7 @@ namespace BacaIN
             ArticleViewModel.offset = 0;
             System.Diagnostics.Debug.WriteLine("Button Community CLicked");
             MainPage.idChannel = 5;
-            NavigationService.Navigate(new Uri("/MainPage.xamlpage_name=Community", UriKind.Relative));
+            NavigationService.Navigate(new Uri("/MainPage.xaml?page_name=Community", UriKind.Relative));
         }
 
         private void grSmartClick(object sender, System.Windows.Input.GestureEventArgs e)
