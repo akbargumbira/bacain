@@ -25,14 +25,15 @@
         <!--TitlePanel contains the name of the application and page title-->
         <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28">
             <TextBlock x:Name="PageTitle" Text="MY APPLICATION" Style="{StaticResource PhoneTextNormalStyle}"/>
-            <TextBlock x:Name="ListTitle" Text="{Binding SelectedArticle.Title}" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+            <TextBlock x:Name="ListTitle" Text="bacaIN" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
         </StackPanel>
 
         <!--ContentPanel contains details text. Place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
-            <ScrollViewer>
+            <ScrollViewer Margin="0,4,0,-4">
                 <StackPanel>
-                    <Image Source="{Binding SelectedArticle.Image}" Stretch="None" />
+                    <TextBlock x:Name="ContentTitile" Text="{Binding SelectedArticle.Title}" FontSize="25" Width="Auto" Height="Auto" MaxWidth="400" TextWrapping="Wrap" />
+					<Image Source="{Binding SelectedArticle.Image}" Stretch="None" />
                     <TextBlock x:Name="ContentText" Text="{Binding SelectedArticle.Body, Converter={StaticResource RssTextTrimmer}}" TextWrapping="Wrap" Style="{StaticResource PhoneTextNormalStyle}" />
                 </StackPanel>
             </ScrollViewer>
