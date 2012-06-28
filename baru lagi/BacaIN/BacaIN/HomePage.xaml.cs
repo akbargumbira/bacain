@@ -10,12 +10,14 @@ using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Shapes;
 using Microsoft.Phone.Controls;
+using System.Windows.Controls.Primitives;
 
 namespace BacaIN
 {
     public partial class HomePage : PhoneApplicationPage
     {
         public static String channelName;
+        public static int mode = 0;
         // Constructor
         public HomePage()
         {
@@ -24,6 +26,7 @@ namespace BacaIN
 
         private void grMindBodyClick(object sender, System.Windows.Input.GestureEventArgs e)
         {
+            mode = 0;
             channelName = "Mind, Body, and Soul";
             ArticleViewModel.offset = 0;
             System.Diagnostics.Debug.WriteLine("Button Mind Body Soul CLicked");
@@ -34,6 +37,7 @@ namespace BacaIN
 
         private void grLeisureClick(object sender, System.Windows.Input.GestureEventArgs e)
         {
+            mode = 0;
             channelName = "Leisure";
             ArticleViewModel.offset = 0;
             System.Diagnostics.Debug.WriteLine("Button Leisure CLicked");
@@ -43,6 +47,7 @@ namespace BacaIN
 
         private void grInspirationClick(object sender, System.Windows.Input.GestureEventArgs e)
         {
+            mode = 0;
             channelName = "Inspiration";
             ArticleViewModel.offset = 0;
             System.Diagnostics.Debug.WriteLine("Button Inspiration CLicked");
@@ -52,6 +57,7 @@ namespace BacaIN
 
         private void grCommunityClick(object sender, System.Windows.Input.GestureEventArgs e)
         {
+            mode = 0;
             channelName = "Community";
             ArticleViewModel.offset = 0;
             System.Diagnostics.Debug.WriteLine("Button Community CLicked");
@@ -61,6 +67,7 @@ namespace BacaIN
 
         private void grSmartClick(object sender, System.Windows.Input.GestureEventArgs e)
         {
+            mode = 0;
             channelName = "Smart";
             ArticleViewModel.offset = 0;
             MainPage.idChannel = 1;
@@ -70,7 +77,27 @@ namespace BacaIN
 
         private void btnLabel_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("tes");
+            mode = 1;
+            Popup popup = new Popup();
+            popup.Height = 300;
+            popup.Width = 400;
+            popup.VerticalOffset = 100;
+            FilterPopUp control = new FilterPopUp();
+            popup.Child = control;
+            popup.IsOpen = true;
+
+            control.btnOK.Click += (s, args) =>
+            {
+                popup.IsOpen = false;
+                channelName = "Filter: "+control.tbx.Text;
+                ArticleViewModel.offset = 0;
+                NavigationService.Navigate(new Uri("/MainPage.xaml?page_name=channelName", UriKind.Relative));
+            };
+
+            control.btnCancel.Click += (s, args) =>
+            {
+                popup.IsOpen = false;
+            };
         }
 
     }
