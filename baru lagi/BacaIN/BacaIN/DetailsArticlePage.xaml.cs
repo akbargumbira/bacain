@@ -37,6 +37,7 @@ namespace BacaIN
         // When page is navigated to set data context to selected item in list
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
+            ListTitle.Text = HomePage.channelName;
             string selectedIndex = "";
             if (NavigationContext.QueryString.TryGetValue("selectedItem", out selectedIndex))
             {

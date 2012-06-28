@@ -15,6 +15,7 @@ namespace BacaIN
 {
     public partial class HomePage : PhoneApplicationPage
     {
+        public static String channelName;
         // Constructor
         public HomePage()
         {
@@ -23,6 +24,7 @@ namespace BacaIN
 
         private void grMindBodyClick(object sender, System.Windows.Input.GestureEventArgs e)
         {
+            channelName = "Mind, Body, and Soul";
             ArticleViewModel.offset = 0;
             System.Diagnostics.Debug.WriteLine("Button Mind Body Soul CLicked");
             MainPage.idChannel = 2;
@@ -32,6 +34,7 @@ namespace BacaIN
 
         private void grLeisureClick(object sender, System.Windows.Input.GestureEventArgs e)
         {
+            channelName = "Leisure";
             ArticleViewModel.offset = 0;
             System.Diagnostics.Debug.WriteLine("Button Leisure CLicked");
             MainPage.idChannel = 3;
@@ -40,6 +43,7 @@ namespace BacaIN
 
         private void grInspirationClick(object sender, System.Windows.Input.GestureEventArgs e)
         {
+            channelName = "Inspiration";
             ArticleViewModel.offset = 0;
             System.Diagnostics.Debug.WriteLine("Button Inspiration CLicked");
             MainPage.idChannel = 4;
@@ -48,6 +52,7 @@ namespace BacaIN
 
         private void grCommunityClick(object sender, System.Windows.Input.GestureEventArgs e)
         {
+            channelName = "Community";
             ArticleViewModel.offset = 0;
             System.Diagnostics.Debug.WriteLine("Button Community CLicked");
             MainPage.idChannel = 5;
@@ -56,6 +61,7 @@ namespace BacaIN
 
         private void grSmartClick(object sender, System.Windows.Input.GestureEventArgs e)
         {
+            channelName = "Smart";
             ArticleViewModel.offset = 0;
             MainPage.idChannel = 1;
             System.Diagnostics.Debug.WriteLine("Button Smart CLicked");
