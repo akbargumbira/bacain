@@ -26,3 +26,6 @@ D:\Informatics\hackontent\bacaIn\baru\BacaIN\BacaIN\obj\Debug\BacaIN.g.resources
 D:\Informatics\hackontent\bacaIn\baru\BacaIN\BacaIN\obj\Debug\BacaIN.dll
 D:\Informatics\hackontent\bacaIn\baru\BacaIN\BacaIN\obj\Debug\BacaIN.pdb
 D:\Informatics\hackontent\bacaIn\baru\BacaIN\BacaIN\obj\Debug\XapCacheFile.xml
+D:\Informatics\hackontent\bacaIn\baru\BacaIN\BacaIN\Bin\Debug\Newtonsoft.Json.dll
+D:\Informatics\hackontent\bacaIn\baru\BacaIN\BacaIN\Bin\Debug\Newtonsoft.Json.pdb
+D:\Informatics\hackontent\bacaIn\baru\BacaIN\BacaIN\Bin\Debug\Newtonsoft.Json.xml

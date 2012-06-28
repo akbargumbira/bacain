@@ -14,8 +14,6 @@ namespace BacaIN
 {
     public class Connection
     {
-        public JSONModel jsonModel;
-        
         public void getRSS(int channelID, int limit, int offset)
         {
             String sitename = "intisari";
@@ -47,12 +45,32 @@ namespace BacaIN
             {
                 // Save the feed into the State property in case the application is tombstoned. 
                 // System.Diagnostics.Debug.WriteLine(e.Result);
-                jsonModel = JsonConvert.DeserializeObject<JSONModel>(e.Result);
-                System.Diagnostics.Debug.WriteLine("Channel Name:" + jsonModel.channel.name);
                 //System.Diagnostics.Debug.WriteLine("Channel Name:"+jsonModelResult.channel.name);
                 //System.Diagnostics.Debug.WriteLine("Total Article:" + jsonModelResult.channel.total_articles);
                 //Article[] articleResult = jsonModelResult.channel.article;
                 //System.Diagnostics.Debug.WriteLine("Title Article 0:" + articleResult[0].title);
+
+                JSONModel jsonModel = JsonConvert.DeserializeObject<JSONModel>(e.Result);
+                JSONModelArticle[] JSONArticles = jsonModel.channel.article;
+                foreach (JSONModelArticle jsonArticle in JSONArticles)
+                {
+                    ((App)App.Current).RootFrame.Dispatcher.BeginInvoke(new Action<Article>(item =>
+                    {
+                        App.ViewModel.articleSources.Add(item);
+                    }), new Article
+                    {
+                        Title = jsonArticle.title,
+                        Description = jsonArticle.description,
+                        Image = jsonArticle.image.xsmall,
+                        Body = jsonArticle.body,
+                        Node_id = jsonArticle.node_id,
+                        Published = jsonArticle.published,
+                        Url = jsonArticle.url,
+                        Url_alias = jsonArticle.url_alias,
+                        View_count = jsonArticle.view_count
+                    });
+                }
+
             }
         }
     }

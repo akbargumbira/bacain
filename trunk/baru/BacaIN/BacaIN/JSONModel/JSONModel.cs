@@ -13,6 +13,6 @@ namespace BacaIN
 {
     public class JSONModel
     {
-        public Channel channel;
+        public JSONModelChannel channel;
     }
 }

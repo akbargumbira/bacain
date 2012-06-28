@@ -11,15 +11,15 @@ using System.Windows.Shapes;
 
 namespace BacaIN
 {
-    public class Channel
+    public class JSONModelChannel
     {
-        public Channel()
+        public JSONModelChannel()
         {
 
         }
 
         public String name;
         public int total_articles;
-        public Article[] article;
+        public JSONModelArticle[] article;
     }
 }
