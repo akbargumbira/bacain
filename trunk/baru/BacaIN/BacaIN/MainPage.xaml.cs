@@ -34,19 +34,15 @@ namespace BacaIN
             App.ViewModel.isDataLoaded = false;
         }
 
-        /* protected override void OnNavigatedTo(System.Windows.Navigation.NavigationEventArgs e)
+        protected override void OnNavigatedTo(System.Windows.Navigation.NavigationEventArgs e)
         {
             base.OnNavigatedTo(e);
 
             // Get strId
-            string strId = "";
-            NavigationContext.QueryString.TryGetValue("idchannel", out strId);
-            System.Diagnostics.Debug.WriteLine("strId:" + strId);
-
-            // Conver string strId to int
-            idChannel = int.Parse(strId);
-            System.Diagnostics.Debug.WriteLine("idChannel:" + idChannel);
-        } */
+            string str = "";
+            NavigationContext.QueryString.TryGetValue("page_name", out str);
+            PageTitle.Text = str;
+        } 
 
         // Handle selection changed on ListBox
         private void MainListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)

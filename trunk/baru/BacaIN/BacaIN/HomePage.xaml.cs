@@ -26,7 +26,7 @@ namespace BacaIN
             ArticleViewModel.offset = 0;
             System.Diagnostics.Debug.WriteLine("Button Mind Body Soul CLicked");
             MainPage.idChannel = 2;
-            NavigationService.Navigate(new Uri("/MainPage.xaml", UriKind.Relative));
+            NavigationService.Navigate(new Uri("/MainPage.xaml?page_name=Mind%20Body%Soul", UriKind.Relative));
         }
 
 
@@ -35,7 +35,7 @@ namespace BacaIN
             ArticleViewModel.offset = 0;
             System.Diagnostics.Debug.WriteLine("Button Leisure CLicked");
             MainPage.idChannel = 3;
-            NavigationService.Navigate(new Uri("/MainPage.xaml", UriKind.Relative));
+            NavigationService.Navigate(new Uri("/MainPage.xaml?page_name=Leisure", UriKind.Relative));
         }
 
         private void grInspirationClick(object sender, System.Windows.Input.GestureEventArgs e)
@@ -43,7 +43,7 @@ namespace BacaIN
             ArticleViewModel.offset = 0;
             System.Diagnostics.Debug.WriteLine("Button Inspiration CLicked");
             MainPage.idChannel = 4;
-            NavigationService.Navigate(new Uri("/MainPage.xaml", UriKind.Relative));
+            NavigationService.Navigate(new Uri("/MainPage.xaml?page_name=Inspiration", UriKind.Relative));
         }
 
         private void grCommunityClick(object sender, System.Windows.Input.GestureEventArgs e)
@@ -51,7 +51,7 @@ namespace BacaIN
             ArticleViewModel.offset = 0;
             System.Diagnostics.Debug.WriteLine("Button Community CLicked");
             MainPage.idChannel = 5;
-            NavigationService.Navigate(new Uri("/MainPage.xaml", UriKind.Relative));
+            NavigationService.Navigate(new Uri("/MainPage.xamlpage_name=Community", UriKind.Relative));
         }
 
         private void grSmartClick(object sender, System.Windows.Input.GestureEventArgs e)
@@ -59,7 +59,7 @@ namespace BacaIN
             ArticleViewModel.offset = 0;
             MainPage.idChannel = 1;
             System.Diagnostics.Debug.WriteLine("Button Smart CLicked");
-            NavigationService.Navigate(new Uri("/MainPage.xaml", UriKind.Relative));
+            NavigationService.Navigate(new Uri("/MainPage.xaml?page_name=Smart", UriKind.Relative));
         }
 
         private void btnLabel_Click(object sender, EventArgs e)
