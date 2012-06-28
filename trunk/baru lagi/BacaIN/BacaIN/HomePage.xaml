@@ -31,7 +31,7 @@
         <!--ContentPanel contains ListBox and ListBox ItemTemplate. Place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
             
-            <Grid x:Name="grMindBody" HorizontalAlignment="Left" Margin="47,216,0,251" Width="140" Background="#FF1BA1E2" Tap="grMindBodyClick">
+            <Grid x:Name="grMindBody" HorizontalAlignment="Left" Margin="47,182,0,207" Width="140" Background="#FF1BA1E2" Tap="grMindBodyClick" Height="140">
                 <TextBlock TextWrapping="Wrap" Text="m" TextAlignment="Center" Height="120" FontSize="120" VerticalAlignment="Bottom" Margin="0,0,2,28" FontFamily="Calibri" Foreground="Black"/>
                 <Border BorderThickness="3" HorizontalAlignment="Right" Height="56" VerticalAlignment="Bottom" Width="140" Background="#BF000000">
                     <TextBlock TextWrapping="Wrap" Text="Mind Body Soul" TextAlignment="Center" Height="49" FontSize="20" VerticalAlignment="Bottom" Margin="-1,0,1,4"/>
@@ -40,7 +40,7 @@
                 <TextBlock x:Name="tBUnreadMindBody" TextWrapping="Wrap" Text="99+" TextAlignment="Center" Height="24" FontSize="16" VerticalAlignment="Top" Margin="0,14,2,0" HorizontalAlignment="Right" Width="41" Foreground="White" FontFamily="Calibri"/>
             </Grid>
 
-            <Grid x:Name="grLeisure" HorizontalAlignment="Right" Margin="0,216,63,251" Width="140" Background="#FFF09609" Tap="grLeisureClick">
+            <Grid x:Name="grLeisure" HorizontalAlignment="Right" Margin="0,185,63,207" Width="140" Background="#FFF09609" Tap="grLeisureClick">
             	<TextBlock TextWrapping="Wrap" Text="l" TextAlignment="Center" Height="120" FontSize="120" VerticalAlignment="Bottom" Margin="0,0,2,28" FontFamily="Calibri" Foreground="Black"/>
             	<Border BorderThickness="3" HorizontalAlignment="Right" Height="56" VerticalAlignment="Bottom" Width="140" Background="#BF000000">
             		<TextBlock TextWrapping="Wrap" Text="Leisure" TextAlignment="Center" Height="49" FontSize="25" VerticalAlignment="Bottom" Margin="-1,0,1,-6"/>
@@ -49,7 +49,7 @@
             	<TextBlock x:Name="tBUnreadLeisure" TextWrapping="Wrap" Text="99+" TextAlignment="Center" Height="24" FontSize="16" VerticalAlignment="Top" Margin="0,14,2,0" HorizontalAlignment="Right" Width="41" Foreground="White" FontFamily="Calibri"/>
             </Grid>
 
-            <Grid x:Name="grInspiration" HorizontalAlignment="Right" Height="140" Margin="0,36,63,0" VerticalAlignment="Top" Width="140" Background="#FF37FB37" Tap="grInspirationClick">
+            <Grid x:Name="grInspiration" HorizontalAlignment="Right" Height="140" Margin="0,20,63,0" VerticalAlignment="Top" Width="140" Background="#FF37FB37" Tap="grInspirationClick">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="103*" />
                     <ColumnDefinition Width="37*" />
@@ -62,7 +62,7 @@
             	<TextBlock x:Name="tBUnreadInspiration" TextWrapping="Wrap" Text="99+" TextAlignment="Center" Height="24" FontSize="16" VerticalAlignment="Top" Margin="0,14,2,0" HorizontalAlignment="Right" Width="41" Foreground="White" FontFamily="Calibri" Grid.ColumnSpan="2" />
             </Grid>
 
-            <Grid x:Name="grCommunity" HorizontalAlignment="Left" Height="140" Margin="47,0,0,67" VerticalAlignment="Bottom" Width="140" Background="#FFF91600" Tap="grCommunityClick">
+            <Grid x:Name="grCommunity" HorizontalAlignment="Left" Height="140" Margin="47,0,0,47" VerticalAlignment="Bottom" Width="140" Background="#FFF91600" Tap="grCommunityClick">
             	<TextBlock TextWrapping="Wrap" Text="c" TextAlignment="Center" Height="120" FontSize="120" VerticalAlignment="Bottom" Margin="0,0,2,28" FontFamily="Calibri" Foreground="Black"/>
             	<Border BorderThickness="3" HorizontalAlignment="Right" Height="56" VerticalAlignment="Bottom" Width="140" Background="#BF000000">
             		<TextBlock TextWrapping="Wrap" Text="Community" TextAlignment="Center" Height="49" FontSize="25" VerticalAlignment="Bottom" Margin="-1,0,1,-6"/>
@@ -71,7 +71,7 @@
             	<TextBlock x:Name="tBUnreadCommunity" TextWrapping="Wrap" Text="99+" TextAlignment="Center" Height="24" FontSize="16" VerticalAlignment="Top" Margin="0,14,2,0" HorizontalAlignment="Right" Width="41" Foreground="White" FontFamily="Calibri"/>
             </Grid>
 
-            <Grid x:Name="grSmart" HorizontalAlignment="Left" Height="140" Margin="47,36,0,0" VerticalAlignment="Top" Width="140" Background="#FFFDFF00" Tap="grSmartClick">
+            <Grid x:Name="grSmart" HorizontalAlignment="Left" Height="140" Margin="47,20,0,0" VerticalAlignment="Top" Width="140" Background="#FFFDFF00" Tap="grSmartClick">
             	<TextBlock TextWrapping="Wrap" Text="smart" TextAlignment="Center" Height="120" FontSize="120" VerticalAlignment="Bottom" Margin="0,0,2,28" FontFamily="Calibri" Foreground="Black"/>
             	<Border BorderThickness="3" HorizontalAlignment="Right" Height="56" VerticalAlignment="Bottom" Width="140" Background="#BF000000">
             		<TextBlock TextWrapping="Wrap" Text="Smart" TextAlignment="Center" Height="49" FontSize="25" VerticalAlignment="Bottom" Margin="-1,0,1,-6"/>
