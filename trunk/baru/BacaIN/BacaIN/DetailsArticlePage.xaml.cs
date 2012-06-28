@@ -53,5 +53,10 @@ namespace BacaIN
             }
         }
 
+        private void btnLabel_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("tes");
+        }
+
     }
 }

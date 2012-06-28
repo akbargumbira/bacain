@@ -61,5 +61,11 @@ namespace BacaIN
             System.Diagnostics.Debug.WriteLine("Button Smart CLicked");
             NavigationService.Navigate(new Uri("/MainPage.xaml", UriKind.Relative));
         }
+
+        private void btnLabel_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("tes");
+        }
+
     }
 }
