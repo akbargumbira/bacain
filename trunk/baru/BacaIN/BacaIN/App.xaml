@@ -7,8 +7,9 @@
 
     <!--Application Resources-->
     <Application.Resources>
+        <converter:RssTextTrimmer xmlns:converter="clr-namespace:BacaIN" x:Key="RssTextTrimmer" />
     </Application.Resources>
-
+    
     <Application.ApplicationLifetimeObjects>
         <!--Required object that handles lifetime events for the application-->
         <shell:PhoneApplicationService 
