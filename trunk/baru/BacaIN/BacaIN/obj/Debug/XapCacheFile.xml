@@ -1,8 +1,8 @@
-﻿<xapCache source="c:\users\danang\documents\visual studio 2010\Projects\BacaIN\BacaIN\Bin\Debug\BacaIN.xap" wasSigned="False" certificateThumbprint="" TimeStampUrl="" lastWriteTime="6/28/2012 4:21:37 PM">
-  <file source="c:\users\danang\documents\visual studio 2010\Projects\BacaIN\BacaIN\Bin\Debug\WMAppManifest.xml" archivePath="WMAppManifest.xml" lastWriteTime="6/28/2012 3:55:32 PM" />
-  <file source="c:\users\danang\documents\visual studio 2010\Projects\BacaIN\BacaIN\Background.png" archivePath="Background.png" lastWriteTime="6/28/2012 3:55:27 PM" />
-  <file source="c:\users\danang\documents\visual studio 2010\Projects\BacaIN\BacaIN\ApplicationIcon.png" archivePath="ApplicationIcon.png" lastWriteTime="6/28/2012 3:55:27 PM" />
-  <file source="c:\users\danang\documents\visual studio 2010\Projects\BacaIN\BacaIN\obj\Debug\BacaIN.dll" archivePath="BacaIN.dll" lastWriteTime="6/28/2012 4:21:36 PM" />
-  <file source="c:\users\danang\documents\visual studio 2010\Projects\BacaIN\BacaIN\SplashScreenImage.jpg" archivePath="SplashScreenImage.jpg" lastWriteTime="6/28/2012 3:55:27 PM" />
-  <file source="c:\users\danang\documents\visual studio 2010\Projects\BacaIN\BacaIN\Bin\Debug\AppManifest.xaml" archivePath="AppManifest.xaml" lastWriteTime="6/28/2012 3:55:32 PM" />
+﻿<xapCache source="D:\Informatics\hackontent\bacaIn\baru\BacaIN\BacaIN\Bin\Debug\BacaIN.xap" wasSigned="False" certificateThumbprint="" TimeStampUrl="" lastWriteTime="28/06/2012 16:32:01">
+  <file source="D:\Informatics\hackontent\bacaIn\baru\BacaIN\BacaIN\Bin\Debug\WMAppManifest.xml" archivePath="WMAppManifest.xml" lastWriteTime="28/06/2012 16:30:08" />
+  <file source="D:\Informatics\hackontent\bacaIn\baru\BacaIN\BacaIN\Background.png" archivePath="Background.png" lastWriteTime="28/06/2012 16:30:06" />
+  <file source="D:\Informatics\hackontent\bacaIn\baru\BacaIN\BacaIN\ApplicationIcon.png" archivePath="ApplicationIcon.png" lastWriteTime="28/06/2012 16:30:06" />
+  <file source="D:\Informatics\hackontent\bacaIn\baru\BacaIN\BacaIN\obj\Debug\BacaIN.dll" archivePath="BacaIN.dll" lastWriteTime="28/06/2012 16:31:58" />
+  <file source="D:\Informatics\hackontent\bacaIn\baru\BacaIN\BacaIN\SplashScreenImage.jpg" archivePath="SplashScreenImage.jpg" lastWriteTime="28/06/2012 16:30:09" />
+  <file source="D:\Informatics\hackontent\bacaIn\baru\BacaIN\BacaIN\Bin\Debug\AppManifest.xaml" archivePath="AppManifest.xaml" lastWriteTime="28/06/2012 16:30:08" />
 </xapCache>

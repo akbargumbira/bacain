@@ -12,3 +12,17 @@ c:\users\danang\documents\visual studio 2010\Projects\BacaIN\BacaIN\obj\Debug\Ba
 c:\users\danang\documents\visual studio 2010\Projects\BacaIN\BacaIN\obj\Debug\BacaIN.dll
 c:\users\danang\documents\visual studio 2010\Projects\BacaIN\BacaIN\obj\Debug\BacaIN.pdb
 c:\users\danang\documents\visual studio 2010\Projects\BacaIN\BacaIN\obj\Debug\XapCacheFile.xml
+D:\Informatics\hackontent\bacaIn\baru\BacaIN\BacaIN\Bin\Debug\ApplicationIcon.png
+D:\Informatics\hackontent\bacaIn\baru\BacaIN\BacaIN\Bin\Debug\Background.png
+D:\Informatics\hackontent\bacaIn\baru\BacaIN\BacaIN\Bin\Debug\BacaIN.dll
+D:\Informatics\hackontent\bacaIn\baru\BacaIN\BacaIN\Bin\Debug\BacaIN.pdb
+D:\Informatics\hackontent\bacaIn\baru\BacaIN\BacaIN\Bin\Debug\AppManifest.xaml
+D:\Informatics\hackontent\bacaIn\baru\BacaIN\BacaIN\Bin\Debug\BacaIN.xap
+D:\Informatics\hackontent\bacaIn\baru\BacaIN\BacaIN\obj\Debug\ResolveAssemblyReference.cache
+D:\Informatics\hackontent\bacaIn\baru\BacaIN\BacaIN\obj\Debug\App.g.i.cs
+D:\Informatics\hackontent\bacaIn\baru\BacaIN\BacaIN\obj\Debug\DetailsPage.g.i.cs
+D:\Informatics\hackontent\bacaIn\baru\BacaIN\BacaIN\obj\Debug\MainPage.g.i.cs
+D:\Informatics\hackontent\bacaIn\baru\BacaIN\BacaIN\obj\Debug\BacaIN.g.resources
+D:\Informatics\hackontent\bacaIn\baru\BacaIN\BacaIN\obj\Debug\BacaIN.dll
+D:\Informatics\hackontent\bacaIn\baru\BacaIN\BacaIN\obj\Debug\BacaIN.pdb
+D:\Informatics\hackontent\bacaIn\baru\BacaIN\BacaIN\obj\Debug\XapCacheFile.xml
