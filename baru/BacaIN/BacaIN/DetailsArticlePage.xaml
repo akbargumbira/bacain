@@ -33,7 +33,7 @@
             <ScrollViewer>
                 <StackPanel>
                     <Image Source="{Binding SelectedArticle.Image}" Stretch="None" />
-                    <TextBlock x:Name="ContentText" Text="{Binding SelectedArticle.Body}" TextWrapping="Wrap" Style="{StaticResource PhoneTextNormalStyle}"/>
+                    <TextBlock x:Name="ContentText" Text="{Binding SelectedArticle.Body, Converter={StaticResource RssTextTrimmer}}" TextWrapping="Wrap" Style="{StaticResource PhoneTextNormalStyle}" />
                 </StackPanel>
             </ScrollViewer>
         </Grid>
