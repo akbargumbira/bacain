@@ -34,7 +34,7 @@
                 <StackPanel>
                     <TextBlock x:Name="ContentTitile" Text="{Binding SelectedArticle.Title}" FontSize="32" Width="Auto" Height="Auto" MaxWidth="400" TextWrapping="Wrap" />
 					<Image Source="{Binding SelectedArticle.Image}" Stretch="None" />
-                    <TextBlock x:Name="ContentText" Text="{Binding SelectedArticle.Body, Converter={StaticResource RssTextTrimmer}}" FontSize="24" Foreground="#FFABABAB" Width="Auto" Height="Auto" MaxWidth="400" TextWrapping="Wrap" />
+                    <TextBlock x:Name="ContentText" Text="{Binding SelectedArticle.Body, Converter={StaticResource RssTextTrimmer}}" FontSize="24" Foreground="#FFABABAB" Width="Auto" MaxWidth="400" TextWrapping="Wrap" />
                 </StackPanel>
             </ScrollViewer>
         </Grid>

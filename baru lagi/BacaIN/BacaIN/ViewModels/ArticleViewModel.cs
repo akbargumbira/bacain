@@ -80,6 +80,7 @@ namespace BacaIN
 
         }
         public static int offset = 0;
+        public static Boolean kotor = false;
         public void LoadData()
         {
             if (HomePage.mode == 0) //Koneksi inet
@@ -90,9 +91,9 @@ namespace BacaIN
                 offset += 10;
                 this.isDataLoaded = true;
             } 
-            else if(HomePage.mode == 1)
+            else if(HomePage.mode == 1 && !kotor)
             {
-                String hashtagSearch = "#okebanget"; //inputUser
+                String hashtagSearch = HomePage.channelName; //inputUser
                 String filename = "label.dat"; //FIlename artikel yang disimpan (yg punya hashtag)
 
                 //Baca FIle:
@@ -101,20 +102,43 @@ namespace BacaIN
 
                 //Deserialisasi
                 Articles articles = JsonConvert.DeserializeObject<Articles>(jsonArticles);
-
-                //Ambil Article yang punya hastag = hashtagSearch:
-                Articles articlesResult = new Articles();
-                int j = 0;
-                for (int i=0; i < articles.articles.Length; ++i)
+                if (articles == null)
                 {
-                    Article article = articles.articles[i];
-                    if (article.Hashtag == hashtagSearch)
-                    {
-                        articles.articles[j] = article;
-                        ++j;
-                    }
+                    this.isDataLoaded = true;
+                    kotor = true;
                 }
-
+                else
+                {
+                    System.Diagnostics.Debug.WriteLine("count " + articles.articles.Count);
+                    //Ambil Article yang punya hastag = hashtagSearch:
+                    Articles articlesResult = new Articles();
+                    for (int i = 0; i < articles.articles.Count; ++i)
+                    {
+                        Article article = articles.articles[i];
+                        if (article.Hashtag == hashtagSearch)
+                        {
+                            System.Diagnostics.Debug.WriteLine(article.Title);
+                            ((App)App.Current).RootFrame.Dispatcher.BeginInvoke(new Action<Article>(item =>
+                            {
+                                App.ViewModel.articleSources.Add(item);
+                            }), new Article
+                            {
+                                Title = article.Title,
+                                Description = article.Description,
+                                Image = article.Image,
+                                Body = article.Body,
+                                Node_id = article.Node_id,
+                                Published = article.Published,
+                                Url = article.Url,
+                                Url_alias = article.Url_alias,
+                                View_count = article.View_count
+                            });
+                        }
+                    }
+                    this.isDataLoaded = true;
+                    kotor = true;
+                }
+                
             }
         }
 
