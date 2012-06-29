@@ -30,10 +30,20 @@ namespace BacaIN
         public String ReadFile(String Filename)
         {
             IsolatedStorageFile myIsolatedStorage = IsolatedStorageFile.GetUserStoreForApplication();
-            IsolatedStorageFileStream fileStream = myIsolatedStorage.OpenFile(Filename, FileMode.Open, FileAccess.Read);
-            using (StreamReader reader = new StreamReader(fileStream))
+            if (myIsolatedStorage.FileExists(Filename))
             {
-                return reader.ReadLine();
+                IsolatedStorageFileStream fileStream = myIsolatedStorage.OpenFile(Filename, FileMode.Open, FileAccess.Read);
+                using (StreamReader reader = new StreamReader(fileStream))
+                {
+                    String str = reader.ReadLine();
+                    reader.Close();
+                    return str;
+                }
+            }
+            else
+            {
+                SaveFile(Filename, "");
+                return "";
             }
         }
     }

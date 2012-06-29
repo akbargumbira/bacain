@@ -12,6 +12,7 @@ using System.Windows.Shapes;
 using System.Windows.Navigation;
 using Microsoft.Phone.Controls;
 using Newtonsoft.Json;
+using System.Windows.Controls.Primitives;
 
 namespace BacaIN
 {
@@ -63,29 +64,48 @@ namespace BacaIN
 
         private void btnLabel_Click(object sender, EventArgs e)
         {
-            String hashtag = "#okebanget"; //inputUser
-            String filename = "label.dat"; //FIlename artikel yang disimpan (yg punya hashtag)
-            
-            //Tambah hashtag ke artikel;
-            App.DetailsArticle.SelectedArticle.Hashtag = hashtag;
+            Popup popup = new Popup();
+            popup.Height = 300;
+            popup.Width = 400;
+            popup.VerticalOffset = 100;
+            PopUpUserControl control = new PopUpUserControl();
+            popup.Child = control;
+            popup.IsOpen = true;
 
-            //Baca FIle:
-            IOHandler ioHandler = new IOHandler();
-            String jsonArticles = ioHandler.ReadFile(filename);
+            control.btnOK.Click += (s, args) =>
+            {
+                String hashtag = control.tbx.Text; //inputUser
+                String filename = "label.dat"; //FIlename artikel yang disimpan (yg punya hashtag)
+                //Tambah hashtag ke artikel;
+                App.DetailsArticle.SelectedArticle.Hashtag = hashtag;
 
-            //Deserialisasi
-            Articles articles = JsonConvert.DeserializeObject<Articles>(jsonArticles);
+                //Baca FIle:
+                IOHandler ioHandler = new IOHandler();
+                String jsonArticles = ioHandler.ReadFile(filename);
 
-            //Tambah artikel yang baru ditambah hashtag:
-            int length = articles.articles.Length;
-            articles.articles[length] = App.DetailsArticle.SelectedArticle;
+                //Deserialisasi
+                Articles articles = JsonConvert.DeserializeObject<Articles>(jsonArticles);
 
-            //Serialisasi
-            String output = JsonConvert.SerializeObject(articles);
+                if (articles == null)
+                    articles = new Articles();
 
-            //Save ke file filename
-            ioHandler.SaveFile(filename, output);
+                //Tambah artikel yang baru ditambah hashtag:
+                articles.articles.Add(App.DetailsArticle.SelectedArticle);
 
+                //Serialisasi
+                String output = JsonConvert.SerializeObject(articles);
+
+                //Save ke file filename
+                IOHandler ioHandler2 = new IOHandler();
+                ioHandler2.SaveFile(filename, output);
+                MessageBox.Show("Labeled");
+                popup.IsOpen = false;
+            };
+
+            control.btnCancel.Click += (s, args) =>
+            {
+                popup.IsOpen = false;
+            };
         }
 
     }

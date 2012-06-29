@@ -77,7 +77,6 @@ namespace BacaIN
 
         private void btnLabel_Click(object sender, EventArgs e)
         {
-            mode = 1;
             Popup popup = new Popup();
             popup.Height = 300;
             popup.Width = 400;
@@ -88,10 +87,11 @@ namespace BacaIN
 
             control.btnOK.Click += (s, args) =>
             {
+                mode = 1;
                 popup.IsOpen = false;
-                channelName = "Filter: "+control.tbx.Text;
+                channelName = control.tbx.Text;
                 ArticleViewModel.offset = 0;
-                NavigationService.Navigate(new Uri("/MainPage.xaml?page_name=channelName", UriKind.Relative));
+                NavigationService.Navigate(new Uri("/MainPage.xaml?page_name=Label:" + channelName, UriKind.Relative));
             };
 
             control.btnCancel.Click += (s, args) =>
